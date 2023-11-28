@@ -1,5 +1,12 @@
 # ChatBox
 CMPE 148 Socket Programming Chat Application 
 
-#run
+#install:
+install npm
+
+#run command to install express socket.io
+npm install express socket.io --save
+
+#to run enter: 
+npm init -y
 node server.js
