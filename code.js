@@ -35,35 +35,36 @@
 
     });
 
+
+
     function renderMessage(type,message){
         let messageContainer = app.querySelector(".chat-screen .messages");
         if(type == "my"){
             let el = document.createElement("div");
             el.setAttribute("class", "message my-message");
-            el.innerHTML =
+            el.innerHTML = `
                 <div>
                     <div class="name">You</div>
-                    <div class="text">$(message.text)</div>
+                    <div class="text">${message.text}</div>
                 </div>
-                ;
+                `;
                 messageContainer.appendChild(el);
         } else if(type == "other"){
             el.setAttribute("class", "message other-message");
-            el.innerHTML =
+            el.innerHTML =`
                 <div>
-                    <div class="name">$(message.username)</div>
-                    <div class="text">$(message.text)</div>
+                    <div class="name">${message.username}</div>
+                    <div class="text">${message.text}</div>
                 </div>
-                ;
+                `;
                 messageContainer.appendChild(el);
         } else if(type == "update"){
             el.setAttribute("class", "update");
-            el.innerHTML = message;
+            el.innerHTML = `${message}`;
                 messageContainer.appendChild(el);
     }
     // scroll chat to end
     messageContainer.scrollTop = messageContainer.scrollHeight - messageContainer.clientHeight;
-    
+
     }
-    
 })();
