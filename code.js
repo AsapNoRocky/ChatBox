@@ -63,5 +63,7 @@
     }
     // scroll chat to end
     messageContainer.scrollTop = messageContainer.scrollHeight - messageContainer.clientHeight;
-
+    
+    }
+    
 })();
